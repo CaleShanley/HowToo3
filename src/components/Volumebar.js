@@ -13,7 +13,7 @@ function VolumeBar() {
         step={0.02}
       />
       <VolumeIcon />
-      Transcipt
+      <span className="volume-bar__icon">Transcript</span>
     </div>
   );
 }
