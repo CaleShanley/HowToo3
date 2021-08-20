@@ -68,6 +68,7 @@ body {
     color: white;
     text-decoration: none;
     margin-right: 1rem;
+    align-items: center;
 
     @media (max-width: 767px) {
       margin-top: 3rem;
@@ -75,6 +76,7 @@ body {
       font-weight: bold;
       display: flex;
       justify-content: center;
+      align-items: center;
       color: white;
       text-decoration: none;
       margin-right: 1rem;
@@ -118,5 +120,94 @@ body {
   &__icon {
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+}
+
+.home {
+  margin: 0 auto;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(23, 40, 67, 1) 70%,
+    rgba(23, 40, 67, 1) 100%
+  );
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 100px);
+    @media (max-width: 1640px) {
+      flex-direction: column-reverse;
+      overflow: scroll;
+    }
+    @media (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    width: 25%;
+
+    @media (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 2rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 5rem;
+
+    @media (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__right {
+    display: flex;
+    width: 100%;
+    background-image: url("./images/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1640px) {
+      margin: 0;
+      background: none;
+    }
+  }
+}
+
+.navbar {
+  background-color: black;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    &:hover {
+      border-bottom: 5px solid #55c6d7;
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
   }
 }
